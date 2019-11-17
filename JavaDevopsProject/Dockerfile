@@ -1,5 +1,6 @@
-From centos
-RUN yum install -y java-1.8.0-openjdk-devel
+From ubuntu
+RUN apt-get update
+RUN apt-get -y install openjdk-8-jdk
 RUN mkdir /var/lib/Devops
 COPY ./target/JavaDevops*.jar /var/lib/Devops/app.jar
 ENTRYPOINT ["/usr/bin/java"]
